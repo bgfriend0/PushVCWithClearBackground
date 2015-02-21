@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vC3-pB-5Vb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="r7l-gg-dq7">
+            <objects>
+                <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="x5M-dV-YNj" kind="relationship" relationship="rootViewController" id="Cha-bV-axb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17" y="205"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="2Fz-LB-egg">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="x5M-dV-YNj" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5iK-Ub-fhc"/>
+                        <viewControllerLayoutGuide type="bottom" id="mp8-j8-Lbf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QVo-v4-sos">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tg4-zt-5FH">
+                                <rect key="frame" x="16" y="84" width="568" height="142"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPi-B5-Uhx">
+                                <rect key="frame" x="283" y="285" width="35" height="30"/>
+                                <state key="normal" title="Push">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapPushButton:" destination="x5M-dV-YNj" eventType="touchUpInside" id="Gy6-Lf-ptt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O9-Mx-3aq">
+                                <rect key="frame" x="16" y="438" width="568" height="142"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ZPi-B5-Uhx" secondAttribute="centerX" id="23t-Gm-aAk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2O9-Mx-3aq" secondAttribute="trailing" id="6it-BG-vZT"/>
+                            <constraint firstItem="mp8-j8-Lbf" firstAttribute="top" secondItem="2O9-Mx-3aq" secondAttribute="bottom" constant="20" id="HRT-xB-yr1"/>
+                            <constraint firstItem="Tg4-zt-5FH" firstAttribute="leading" secondItem="QVo-v4-sos" secondAttribute="leadingMargin" id="S2g-hR-DS3"/>
+                            <constraint firstItem="Tg4-zt-5FH" firstAttribute="top" secondItem="5iK-Ub-fhc" secondAttribute="bottom" constant="20" id="Zt8-B7-qS4"/>
+                            <constraint firstItem="2O9-Mx-3aq" firstAttribute="leading" secondItem="QVo-v4-sos" secondAttribute="leadingMargin" id="aYt-o2-opw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tg4-zt-5FH" secondAttribute="trailing" id="eJv-BQ-Ud4"/>
+                            <constraint firstAttribute="centerX" secondItem="Tg4-zt-5FH" secondAttribute="centerX" id="giy-hs-Tek"/>
+                            <constraint firstAttribute="centerY" secondItem="ZPi-B5-Uhx" secondAttribute="centerY" id="n4J-vn-8Uj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Gt-yR-QcL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hPC-g7-aJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="739" y="205"/>
+        </scene>
+    </scenes>
+</document>
